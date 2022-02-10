@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2022 at 04:37 AM
+-- Generation Time: Feb 10, 2022 at 04:58 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `alamat` (
-  `NIK` int(16) NOT NULL,
+  `NIK` varchar(16) NOT NULL,
   `Jalan` varchar(30) NOT NULL,
   `Desa` varchar(30) NOT NULL,
   `Kabupaten` varchar(30) NOT NULL,
@@ -43,8 +43,8 @@ CREATE TABLE `alamat` (
 --
 
 CREATE TABLE `orang` (
-  `NIK` int(16) NOT NULL,
-  `Nomor KK` int(20) NOT NULL,
+  `NIK` varchar(16) NOT NULL,
+  `Nomor KK` varchar(20) NOT NULL,
   `Nama lengkap` varchar(50) NOT NULL,
   `Nama panggilan` varchar(20) NOT NULL,
   `Kedudukan dalam keluarga` varchar(30) NOT NULL
@@ -57,7 +57,7 @@ CREATE TABLE `orang` (
 --
 
 CREATE TABLE `penduduk` (
-  `NIK` int(16) NOT NULL,
+  `NIK` varchar(16) NOT NULL,
   `Nomor urut` int(10) NOT NULL,
   `Jenis kelamin` enum('Laki-laki','Perempuan','','') NOT NULL,
   `Status perkawinan` varchar(20) NOT NULL,
@@ -75,8 +75,8 @@ CREATE TABLE `penduduk` (
 --
 
 CREATE TABLE `ttl` (
-  `NIK` int(16) NOT NULL,
-  `Tempat lahir` int(30) NOT NULL,
+  `NIK` varchar(16) NOT NULL,
+  `Tempat lahir` varchar(30) NOT NULL,
   `Tanggal lahir` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
